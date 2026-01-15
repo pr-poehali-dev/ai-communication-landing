@@ -21,11 +21,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-border/50">
+      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-6 py-5 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
-              <Icon name="Sparkles" size={18} className="text-white" />
+              <Icon name="Sparkles" size={18} className="text-background" />
             </div>
             <span className="text-lg font-bold">ИИ для коммуникаций</span>
           </div>
@@ -34,16 +34,16 @@ const Index = () => {
             <a href="#program" className="hover:text-primary transition-colors">Программа</a>
             <a href="#result" className="hover:text-primary transition-colors">Результат</a>
           </div>
-          <Button className="gradient-primary hover:opacity-90 text-white font-semibold rounded-full px-6">
+          <Button className="gradient-primary hover:opacity-90 text-background font-semibold rounded-full px-6">
             Оставить заявку
           </Button>
         </div>
       </nav>
 
       <section className="pt-32 pb-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-purple-500/5 to-pink-500/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-blue-500/5 to-cyan-500/5"></div>
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto relative z-10">
           <div className="max-w-6xl mx-auto">
@@ -63,7 +63,7 @@ const Index = () => {
                   Практическая двухдневная программа о том, как использовать искусственный интеллект для управления смыслами, репутацией и скоростью реакции — в реальной работе, а не в теории.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                  <Button size="lg" className="gradient-primary hover:opacity-90 text-white font-semibold rounded-full text-base px-8 h-14 glow-effect">
+                  <Button size="lg" className="gradient-primary hover:opacity-90 text-background font-semibold rounded-full text-base px-8 h-14 glow-effect">
                     <Icon name="Calendar" size={20} className="mr-2" />
                     Оставить заявку
                   </Button>
@@ -79,19 +79,19 @@ const Index = () => {
               
               <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
-                  <Card className="p-8 bg-gradient-to-br from-primary/10 to-purple-500/10 border-primary/20 hover:scale-105 transition-transform">
-                    <div className="text-5xl font-black gradient-text mb-2">2</div>
+                  <Card className="p-8 bg-primary/10 border-primary/20 hover:scale-105 transition-transform">
+                    <div className="text-5xl font-black text-primary mb-2">2</div>
                     <div className="text-sm font-medium text-foreground/60">дня</div>
                   </Card>
-                  <Card className="p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 hover:scale-105 transition-transform">
-                    <div className="text-5xl font-black text-purple-600 mb-2">8-9</div>
+                  <Card className="p-8 bg-primary/10 border-primary/20 hover:scale-105 transition-transform">
+                    <div className="text-5xl font-black text-primary mb-2">8-9</div>
                     <div className="text-sm font-medium text-foreground/60">часов</div>
                   </Card>
-                  <Card className="p-8 bg-gradient-to-br from-pink-500/10 to-primary/10 border-pink-500/20 hover:scale-105 transition-transform">
-                    <div className="text-5xl font-black text-pink-600 mb-2">50/50</div>
+                  <Card className="p-8 bg-primary/10 border-primary/20 hover:scale-105 transition-transform">
+                    <div className="text-5xl font-black text-primary mb-2">50/50</div>
                     <div className="text-sm font-medium text-foreground/60">практика</div>
                   </Card>
-                  <Card className="p-8 bg-gradient-to-br from-primary/10 to-purple-500/10 border-primary/20 hover:scale-105 transition-transform">
+                  <Card className="p-8 bg-primary/10 border-primary/20 hover:scale-105 transition-transform">
                     <Icon name="Users" size={40} className="text-primary mb-2" />
                     <div className="text-sm font-medium text-foreground/60">Очно</div>
                   </Card>
@@ -102,7 +102,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-black mb-6">
@@ -153,11 +153,69 @@ const Index = () => {
             </div>
           </div>
 
-          <Card className="p-10 bg-gradient-to-br from-primary/5 to-purple-500/5 border-primary/20 text-center">
+          <Card className="p-10 bg-primary/10 border-primary/20 text-center">
             <p className="text-xl font-semibold text-foreground/80">
               Эта программа — про <span className="text-primary">системное, безопасное и прикладное</span> использование ИИ в коммуникациях
             </p>
           </Card>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-background">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-black mb-6">
+              Как проходит <span className="gradient-text">обучение</span>
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Фото и видео с прошлых программ
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="overflow-hidden border-2 border-border hover:border-primary/50 transition-all group">
+              <div className="aspect-video bg-muted/50 relative overflow-hidden flex items-center justify-center">
+                <Icon name="Image" size={64} className="text-muted-foreground/30" />
+                <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors"></div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold mb-2">Практическая работа с ИИ</h3>
+                <p className="text-foreground/60">Участники создают контент в режиме реального времени</p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden border-2 border-border hover:border-primary/50 transition-all group">
+              <div className="aspect-video bg-muted/50 relative overflow-hidden flex items-center justify-center">
+                <Icon name="PlayCircle" size={64} className="text-primary/50 group-hover:text-primary transition-colors" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold mb-2">Видеообзор программы</h3>
+                <p className="text-foreground/60">Посмотрите, как проходит двухдневное обучение</p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden border-2 border-border hover:border-primary/50 transition-all group">
+              <div className="aspect-video bg-muted/50 relative overflow-hidden flex items-center justify-center">
+                <Icon name="Image" size={64} className="text-muted-foreground/30" />
+                <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors"></div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold mb-2">Групповые разборы кейсов</h3>
+                <p className="text-foreground/60">Обсуждаем реальные задачи участников</p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden border-2 border-border hover:border-primary/50 transition-all group">
+              <div className="aspect-video bg-muted/50 relative overflow-hidden flex items-center justify-center">
+                <Icon name="Image" size={64} className="text-muted-foreground/30" />
+                <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors"></div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold mb-2">Живое взаимодействие</h3>
+                <p className="text-foreground/60">Вопросы, ответы и обмен опытом</p>
+              </div>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -174,15 +232,15 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             {[
-              { icon: "Newspaper", title: "Пресс-службы и PR-подразделения", color: "from-primary/20 to-purple-500/20" },
-              { icon: "Tv", title: "Сотрудники СМИ и редакций", color: "from-purple-500/20 to-pink-500/20" },
-              { icon: "MessageSquare", title: "Администраторы Telegram и ВК", color: "from-pink-500/20 to-primary/20" },
-              { icon: "User", title: "Блогеры и авторы личных брендов", color: "from-primary/20 to-purple-500/20" },
-              { icon: "Briefcase", title: "Предприниматели и управленцы", color: "from-purple-500/20 to-pink-500/20" },
-              { icon: "Users", title: "Политики и их команды", color: "from-pink-500/20 to-primary/20" }
+              { icon: "Newspaper", title: "Пресс-службы и PR-подразделения" },
+              { icon: "Tv", title: "Сотрудники СМИ и редакций" },
+              { icon: "MessageSquare", title: "Администраторы Telegram и ВК" },
+              { icon: "User", title: "Блогеры и авторы личных брендов" },
+              { icon: "Briefcase", title: "Предприниматели и управленцы" },
+              { icon: "Users", title: "Политики и их команды" }
             ].map((item, idx) => (
-              <Card key={idx} className={`p-8 bg-gradient-to-br ${item.color} border-0 hover:scale-105 transition-all group`}>
-                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+              <Card key={idx} className="p-8 bg-primary/10 border-primary/20 hover:scale-105 transition-all group">
+                <div className="w-14 h-14 bg-card rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
                   <Icon name={item.icon} size={28} className="text-primary" />
                 </div>
                 <h3 className="text-lg font-bold">{item.title}</h3>
@@ -197,7 +255,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="program" className="py-24 px-4 bg-white">
+      <section id="program" className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-black mb-6">
@@ -209,11 +267,11 @@ const Index = () => {
           </div>
           
           <Accordion type="single" collapsible className="space-y-6">
-            <AccordionItem value="day1" className="bg-muted/30 rounded-3xl border-2 border-border overflow-hidden">
+            <AccordionItem value="day1" className="bg-card rounded-3xl border-2 border-border overflow-hidden">
               <AccordionTrigger className="px-10 py-8 text-left hover:no-underline">
                 <div className="flex items-start gap-6">
                   <div className="w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center shrink-0 shadow-lg">
-                    <span className="font-black text-2xl text-white">1</span>
+                    <span className="font-black text-2xl text-background">1</span>
                   </div>
                   <div>
                     <div className="text-3xl font-black mb-2">День 1</div>
@@ -246,11 +304,11 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="day2" className="bg-muted/30 rounded-3xl border-2 border-border overflow-hidden">
+            <AccordionItem value="day2" className="bg-card rounded-3xl border-2 border-border overflow-hidden">
               <AccordionTrigger className="px-10 py-8 text-left hover:no-underline">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg">
-                    <span className="font-black text-2xl text-white">2</span>
+                  <div className="w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center shrink-0 shadow-lg">
+                    <span className="font-black text-2xl text-background">2</span>
                   </div>
                   <div>
                     <div className="text-3xl font-black mb-2">День 2</div>
@@ -270,8 +328,8 @@ const Index = () => {
                     { title: "Пошаговый план внедрения ИИ за 30 дней", desc: "Готовый чеклист для вашей работы" }
                   ].map((item, idx) => (
                     <div key={idx} className="flex gap-4 items-start">
-                      <div className="w-6 h-6 rounded-full bg-purple-600/20 flex items-center justify-center shrink-0 mt-1">
-                        <Icon name="Check" size={14} className="text-purple-600" />
+                      <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-1">
+                        <Icon name="Check" size={14} className="text-primary" />
                       </div>
                       <div>
                         <h4 className="font-bold text-lg mb-1">{item.title}</h4>
@@ -288,7 +346,7 @@ const Index = () => {
 
       <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
-          <Card className="p-12 gradient-primary text-white rounded-3xl shadow-2xl glow-effect text-center">
+          <Card className="p-12 gradient-primary text-background rounded-3xl shadow-2xl glow-effect text-center">
             <Icon name="Target" size={56} className="mx-auto mb-6 opacity-90" />
             <h3 className="text-4xl font-black mb-6">Ключевая идея программы</h3>
             <p className="text-2xl leading-relaxed opacity-95 font-medium">
@@ -300,7 +358,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="result" className="py-24 px-4 bg-white">
+      <section id="result" className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-black mb-6">
@@ -316,42 +374,36 @@ const Index = () => {
               { 
                 icon: "BookOpen", 
                 title: "Персональная библиотека промптов", 
-                desc: "Готовые шаблоны под вашу деятельность — от пресс-релизов до постов", 
-                gradient: "from-primary/20 to-purple-500/20" 
+                desc: "Готовые шаблоны под вашу деятельность — от пресс-релизов до постов"
               },
               { 
                 icon: "FileText", 
                 title: "Набор готовых текстов и визуалов", 
-                desc: "Материалы, созданные на обучении и готовые к использованию", 
-                gradient: "from-purple-500/20 to-pink-500/20" 
+                desc: "Материалы, созданные на обучении и готовые к использованию"
               },
               { 
                 icon: "CalendarDays", 
                 title: "Контент-план на 2-4 недели", 
-                desc: "Готовый план публикаций для всех ваших каналов", 
-                gradient: "from-pink-500/20 to-primary/20" 
+                desc: "Готовый план публикаций для всех ваших каналов"
               },
               { 
                 icon: "BarChart3", 
                 title: "Шаблоны аналитики и мониторинга", 
-                desc: "Инструменты для отслеживания эффективности и медиа-поля", 
-                gradient: "from-primary/20 to-purple-500/20" 
+                desc: "Инструменты для отслеживания эффективности и медиа-поля"
               },
               { 
                 icon: "Rocket", 
                 title: "Пошаговый план внедрения ИИ за 30 дней", 
-                desc: "Чёткий чеклист действий для интеграции ИИ в работу", 
-                gradient: "from-purple-500/20 to-pink-500/20" 
+                desc: "Чёткий чеклист действий для интеграции ИИ в работу"
               },
               { 
                 icon: "Lightbulb", 
                 title: "Чёткое понимание применения ИИ", 
-                desc: "Уверенность в качестве, безопасности и эффективности", 
-                gradient: "from-pink-500/20 to-primary/20" 
+                desc: "Уверенность в качестве, безопасности и эффективности"
               }
             ].map((item, idx) => (
-              <Card key={idx} className={`p-8 bg-gradient-to-br ${item.gradient} border-0 hover:scale-105 transition-all`}>
-                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+              <Card key={idx} className="p-8 bg-primary/10 border-primary/20 hover:scale-105 transition-all">
+                <div className="w-14 h-14 bg-card rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                   <Icon name={item.icon} size={28} className="text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
@@ -368,8 +420,8 @@ const Index = () => {
               { label: "Каналов охватываете", value: "Больше" },
               { label: "Конкурентное преимущество", value: "Явное" }
             ].map((item, idx) => (
-              <Card key={idx} className="p-6 bg-gradient-to-br from-primary/5 to-purple-500/5 border-primary/20">
-                <div className="text-3xl font-black gradient-text mb-2">{item.value}</div>
+              <Card key={idx} className="p-6 bg-primary/10 border-primary/20">
+                <div className="text-3xl font-black text-primary mb-2">{item.value}</div>
                 <div className="text-sm font-medium text-foreground/60">{item.label}</div>
               </Card>
             ))}
@@ -399,7 +451,7 @@ const Index = () => {
               ].map((item, idx) => (
                 <Card key={idx} className="p-6 flex gap-5 items-start border-2 border-border hover:border-primary/50 transition-all">
                   <div className="w-14 h-14 gradient-primary rounded-2xl flex items-center justify-center shrink-0 shadow-lg">
-                    <Icon name={item.icon} size={24} className="text-white" />
+                    <Icon name={item.icon} size={24} className="text-background" />
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">{item.title}</h4>
@@ -453,7 +505,7 @@ const Index = () => {
                     className="rounded-xl border-2"
                   />
                 </div>
-                <Button type="submit" className="w-full h-14 text-base font-bold gradient-primary hover:opacity-90 text-white rounded-full glow-effect">
+                <Button type="submit" className="w-full h-14 text-base font-bold gradient-primary hover:opacity-90 text-background rounded-full glow-effect">
                   Отправить заявку
                   <Icon name="ArrowRight" size={20} className="ml-2" />
                 </Button>
@@ -463,16 +515,16 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-16 px-4 bg-foreground text-background">
+      <footer className="py-16 px-4 bg-card border-t border-border">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
-                <Icon name="Sparkles" size={20} className="text-white" />
+                <Icon name="Sparkles" size={20} className="text-background" />
               </div>
               <div>
                 <div className="font-bold text-lg">ИИ для коммуникаций</div>
-                <div className="text-sm text-background/60">Практический инструмент для результата</div>
+                <div className="text-sm text-foreground/60">Практический инструмент для результата</div>
               </div>
             </div>
             <div className="flex gap-8 text-sm font-medium">
@@ -481,7 +533,7 @@ const Index = () => {
               <a href="#result" className="hover:text-primary transition-colors">Результат</a>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-background/10 text-center text-sm text-background/40">
+          <div className="mt-8 pt-8 border-t border-border text-center text-sm text-foreground/40">
             © 2026 Образовательная программа по ИИ
           </div>
         </div>
