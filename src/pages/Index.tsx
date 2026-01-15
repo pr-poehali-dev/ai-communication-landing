@@ -21,260 +21,269 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="text-xl font-black">ИИ для коммуникаций</div>
-          <div className="hidden md:flex gap-8 text-sm">
-            <a href="#audience" className="hover:text-primary transition-colors font-medium">Для кого</a>
-            <a href="#program" className="hover:text-primary transition-colors font-medium">Программа</a>
-            <a href="#results" className="hover:text-primary transition-colors font-medium">Результаты</a>
-            <a href="#faq" className="hover:text-primary transition-colors font-medium">FAQ</a>
+      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-border/50">
+        <div className="container mx-auto px-6 py-5 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
+              <Icon name="Sparkles" size={18} className="text-white" />
+            </div>
+            <span className="text-lg font-bold">ИИ для коммуникаций</span>
           </div>
-          <Button className="bg-secondary hover:bg-secondary/90 text-white font-medium">Записаться</Button>
+          <div className="hidden md:flex gap-8 text-sm font-medium">
+            <a href="#audience" className="hover:text-primary transition-colors">Для кого</a>
+            <a href="#program" className="hover:text-primary transition-colors">Программа</a>
+            <a href="#examples" className="hover:text-primary transition-colors">Примеры</a>
+            <a href="#results" className="hover:text-primary transition-colors">Результаты</a>
+          </div>
+          <Button className="gradient-primary hover:opacity-90 text-white font-semibold rounded-full px-6">
+            Записаться
+          </Button>
         </div>
       </nav>
 
-      <section className="pt-28 pb-16 px-4 bg-muted/30">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto">
-            <div className="inline-block px-4 py-1.5 bg-primary/20 rounded-full text-sm font-medium mb-6">
-              Очная программа • 2 дня
-            </div>
-            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-              ИИ для коммуникаций
-            </h1>
-            <p className="text-xl md:text-2xl mb-6 text-muted-foreground font-medium">
-              пресс-службы, медиа, блоги, бизнес и политика
-            </p>
-            <p className="text-lg mb-8 max-w-2xl leading-relaxed">
-              Искусственный интеллект перестал быть экспериментом. 
-              Сегодня это рабочий инструмент для тех, кто отвечает за смыслы, повестку, репутацию и скорость реакции.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white text-base font-medium px-8">
-                Записаться на обучение
-              </Button>
-              <Button size="lg" variant="outline" className="text-base font-medium px-8">
-                Программа курса
-              </Button>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-white p-5 rounded-lg border border-border">
-                <div className="text-3xl font-black mb-1">2</div>
-                <div className="text-sm text-muted-foreground">дня обучения</div>
-              </div>
-              <div className="bg-white p-5 rounded-lg border border-border">
-                <div className="text-3xl font-black mb-1">50/50</div>
-                <div className="text-sm text-muted-foreground">теория/практика</div>
-              </div>
-              <div className="bg-white p-5 rounded-lg border border-border">
-                <div className="text-3xl font-black mb-1">8-9ч</div>
-                <div className="text-sm text-muted-foreground">в день</div>
-              </div>
-              <div className="bg-white p-5 rounded-lg border border-border">
-                <div className="text-3xl font-black mb-1">Очно</div>
-                <div className="text-sm text-muted-foreground">формат</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto">
+      <section className="pt-32 pb-20 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-purple-500/5 to-pink-500/5"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto relative z-10">
           <div className="max-w-6xl mx-auto">
-            <img 
-              src="https://cdn.poehali.dev/projects/663ee447-add9-4d61-a565-0705558e3203/files/9ea4c986-e7cd-41e8-b386-2d100c321145.jpg" 
-              alt="Работа с ИИ" 
-              className="w-full h-[400px] object-cover rounded-2xl mb-12"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="audience" className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">
-              Для кого это обучение
-            </h2>
-            <p className="text-lg text-muted-foreground mb-12 max-w-2xl">
-              Программа подходит специалистам, которые работают с коммуникациями и хотят освоить практическое применение ИИ
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { 
-                  icon: "Newspaper", 
-                  title: "Пресс-службы и PR", 
-                  desc: "Автоматизация работы с текстами, аналитикой и медиа-мониторингом" 
-                },
-                { 
-                  icon: "Tv", 
-                  title: "СМИ и редакции", 
-                  desc: "Ускорение создания контента, поиск инфоповодов и трендов" 
-                },
-                { 
-                  icon: "MessageSquare", 
-                  title: "Telegram и ВК", 
-                  desc: "Системное управление каналами и сообществами с помощью ИИ" 
-                },
-                { 
-                  icon: "User", 
-                  title: "Блогеры", 
-                  desc: "Инструменты для развития личного бренда и регулярного контента" 
-                },
-                { 
-                  icon: "Briefcase", 
-                  title: "Бизнес", 
-                  desc: "Управление репутацией компании и коммуникацией с клиентами" 
-                },
-                { 
-                  icon: "Users", 
-                  title: "Политика", 
-                  desc: "Стратегическая коммуникация и работа с общественным мнением" 
-                }
-              ].map((item, idx) => (
-                <Card key={idx} className="p-6 bg-white hover:shadow-lg transition-all border border-border">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <Icon name={item.icon} size={24} />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
-                </Card>
-              ))}
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-semibold mb-8 border border-primary/20">
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                  Очная программа • 2 дня
+                </div>
+                <h1 className="text-6xl md:text-7xl font-black mb-6 leading-[1.1]">
+                  <span className="gradient-text">ИИ для коммуникаций</span>
+                </h1>
+                <p className="text-2xl mb-4 text-foreground/70 font-medium">
+                  пресс-службы, медиа, блоги, бизнес и политика
+                </p>
+                <p className="text-lg mb-10 text-foreground/60 leading-relaxed max-w-xl">
+                  Искусственный интеллект перестал быть экспериментом. 
+                  Сегодня это рабочий инструмент для тех, кто отвечает за смыслы, повестку, репутацию и скорость реакции.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="gradient-primary hover:opacity-90 text-white font-semibold rounded-full text-base px-8 h-14 glow-effect">
+                    <Icon name="Calendar" size={20} className="mr-2" />
+                    Записаться на обучение
+                  </Button>
+                  <Button size="lg" variant="outline" className="font-semibold rounded-full text-base px-8 h-14 border-2">
+                    <Icon name="FileText" size={20} className="mr-2" />
+                    Программа курса
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="relative">
+                <div className="grid grid-cols-2 gap-4">
+                  <Card className="p-8 bg-gradient-to-br from-primary/10 to-purple-500/10 border-primary/20 hover:scale-105 transition-transform">
+                    <div className="text-5xl font-black gradient-text mb-2">2</div>
+                    <div className="text-sm font-medium text-foreground/60">дня обучения</div>
+                  </Card>
+                  <Card className="p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 hover:scale-105 transition-transform">
+                    <div className="text-5xl font-black text-purple-600 mb-2">50/50</div>
+                    <div className="text-sm font-medium text-foreground/60">теория/практика</div>
+                  </Card>
+                  <Card className="p-8 bg-gradient-to-br from-pink-500/10 to-primary/10 border-pink-500/20 hover:scale-105 transition-transform">
+                    <div className="text-5xl font-black text-pink-600 mb-2">8-9</div>
+                    <div className="text-sm font-medium text-foreground/60">часов в день</div>
+                  </Card>
+                  <Card className="p-8 bg-gradient-to-br from-primary/10 to-purple-500/10 border-primary/20 hover:scale-105 transition-transform">
+                    <Icon name="Users" size={40} className="text-primary mb-2" />
+                    <div className="text-sm font-medium text-foreground/60">Очный формат</div>
+                  </Card>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-            <img 
-              src="https://cdn.poehali.dev/projects/663ee447-add9-4d61-a565-0705558e3203/files/013a9479-f552-4b62-95a6-b88e2ff54c29.jpg" 
-              alt="Командная работа" 
-              className="w-full h-[350px] object-cover rounded-2xl"
-            />
-            <img 
-              src="https://cdn.poehali.dev/projects/663ee447-add9-4d61-a565-0705558e3203/files/fc7ba270-3119-49b8-94dc-b63f88692fb4.jpg" 
-              alt="Создание контента" 
-              className="w-full h-[350px] object-cover rounded-2xl"
-            />
+      <section id="audience" className="py-24 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-black mb-6">
+              Для кого это <span className="gradient-text">обучение</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Программа подходит специалистам, которые работают с коммуникациями и хотят освоить ИИ
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: "Newspaper", title: "Пресс-службы и PR", desc: "Автоматизация работы с текстами, аналитикой и медиа-мониторингом", color: "from-primary/20 to-purple-500/20" },
+              { icon: "Tv", title: "СМИ и редакции", desc: "Ускорение создания контента, поиск инфоповодов и трендов", color: "from-purple-500/20 to-pink-500/20" },
+              { icon: "MessageSquare", title: "Telegram и ВК", desc: "Системное управление каналами и сообществами с помощью ИИ", color: "from-pink-500/20 to-primary/20" },
+              { icon: "User", title: "Блогеры", desc: "Инструменты для развития личного бренда и регулярного контента", color: "from-primary/20 to-purple-500/20" },
+              { icon: "Briefcase", title: "Бизнес", desc: "Управление репутацией компании и коммуникацией с клиентами", color: "from-purple-500/20 to-pink-500/20" },
+              { icon: "Users", title: "Политика", desc: "Стратегическая коммуникация и работа с общественным мнением", color: "from-pink-500/20 to-primary/20" }
+            ].map((item, idx) => (
+              <Card key={idx} className={`p-8 bg-gradient-to-br ${item.color} border-0 hover:scale-105 transition-all group`}>
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                  <Icon name={item.icon} size={28} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                <p className="text-foreground/60 leading-relaxed">{item.desc}</p>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      <section id="program" className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Программа обучения
-          </h2>
-          <p className="text-lg text-muted-foreground mb-12">
-            Двухдневная интенсивная программа с балансом теории и практики
-          </p>
+      <section id="examples" className="py-24 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-black mb-6">
+              <span className="gradient-text">Примеры</span> работы с ИИ
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Реальные кейсы применения нейросетей в коммуникациях
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <Card className="overflow-hidden border-2 border-border hover:border-primary/50 transition-all group">
+              <div className="aspect-video bg-gradient-to-br from-primary/10 to-purple-500/10 relative overflow-hidden">
+                <video 
+                  className="w-full h-full object-cover"
+                  poster="https://cdn.poehali.dev/projects/663ee447-add9-4d61-a565-0705558e3203/files/9ea4c986-e7cd-41e8-b386-2d100c321145.jpg"
+                  controls
+                >
+                  <source src="#" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+                  <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center">
+                    <Icon name="Play" size={28} className="text-primary ml-1" />
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Генерация пресс-релиза за 2 минуты</h3>
+                <p className="text-foreground/60">Как ИИ помогает создавать качественные тексты для СМИ в 10 раз быстрее</p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden border-2 border-border hover:border-primary/50 transition-all group">
+              <div className="aspect-video bg-gradient-to-br from-purple-500/10 to-pink-500/10 relative overflow-hidden">
+                <video 
+                  className="w-full h-full object-cover"
+                  poster="https://cdn.poehali.dev/projects/663ee447-add9-4d61-a565-0705558e3203/files/013a9479-f552-4b62-95a6-b88e2ff54c29.jpg"
+                  controls
+                >
+                  <source src="#" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+                  <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center">
+                    <Icon name="Play" size={28} className="text-primary ml-1" />
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Контент-план на месяц за 10 минут</h3>
+                <p className="text-foreground/60">Автоматизация планирования публикаций для всех каналов</p>
+              </div>
+            </Card>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { icon: "Image", title: "Визуальный контент", desc: "Создание изображений для постов" },
+              { icon: "BarChart3", title: "Медиа-аналитика", desc: "Мониторинг упоминаний в реальном времени" },
+              { icon: "MessageCircle", title: "Ответы на комментарии", desc: "Автоматизация коммуникации" }
+            ].map((item, idx) => (
+              <Card key={idx} className="p-6 border-2 border-border hover:border-primary/50 transition-all hover:scale-105">
+                <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mb-4">
+                  <Icon name={item.icon} size={24} className="text-white" />
+                </div>
+                <h4 className="font-bold mb-2">{item.title}</h4>
+                <p className="text-sm text-foreground/60">{item.desc}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="program" className="py-24 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-black mb-6">
+              Программа <span className="gradient-text">обучения</span>
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Двухдневная интенсивная программа с балансом теории и практики
+            </p>
+          </div>
+          
           <Accordion type="single" collapsible className="space-y-6">
-            <AccordionItem value="day1" className="bg-white rounded-xl border border-border overflow-hidden">
-              <AccordionTrigger className="px-8 py-6 text-left hover:no-underline">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shrink-0">
-                    <span className="font-black text-lg">1</span>
+            <AccordionItem value="day1" className="bg-white rounded-3xl border-2 border-border overflow-hidden">
+              <AccordionTrigger className="px-10 py-8 text-left hover:no-underline">
+                <div className="flex items-start gap-6">
+                  <div className="w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center shrink-0 shadow-lg">
+                    <span className="font-black text-2xl text-white">1</span>
                   </div>
                   <div>
-                    <div className="text-2xl font-black mb-1">День 1</div>
-                    <div className="text-base font-normal text-muted-foreground">Тексты, контент и системность</div>
+                    <div className="text-3xl font-black mb-2">День 1</div>
+                    <div className="text-lg font-medium text-foreground/60">Тексты, контент и системность</div>
                   </div>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="px-8 pb-8 pt-0">
-                <div className="space-y-4 pl-16">
-                  <div className="flex gap-3 items-start">
-                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0"></div>
-                    <div>
-                      <h4 className="font-bold mb-1">ИИ без мифов</h4>
-                      <p className="text-muted-foreground">Где он реально помогает в коммуникациях</p>
+              <AccordionContent className="px-10 pb-10 pt-0">
+                <div className="space-y-5 pl-20">
+                  {[
+                    { title: "ИИ без мифов", desc: "Где он реально помогает в коммуникациях" },
+                    { title: "Контент-генерация", desc: "Посты, пресс-релизы, заявления, заголовки" },
+                    { title: "Промпт-инжиниринг", desc: "Для PR, СМИ и соцсетей — практические шаблоны" },
+                    { title: "Мультиканальность", desc: "Один инфоповод → Telegram, ВК, СМИ, сайт" },
+                    { title: "Контент-планирование", desc: "Работа «впрок» с ИИ-ассистентами" }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex gap-4 items-start">
+                      <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-1">
+                        <Icon name="Check" size={14} className="text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-1">{item.title}</h4>
+                        <p className="text-foreground/60">{item.desc}</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex gap-3 items-start">
-                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0"></div>
-                    <div>
-                      <h4 className="font-bold mb-1">Контент-генерация</h4>
-                      <p className="text-muted-foreground">Посты, пресс-релизы, заявления, заголовки</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-3 items-start">
-                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0"></div>
-                    <div>
-                      <h4 className="font-bold mb-1">Промпт-инжиниринг</h4>
-                      <p className="text-muted-foreground">Для PR, СМИ и соцсетей — практические шаблоны</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-3 items-start">
-                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0"></div>
-                    <div>
-                      <h4 className="font-bold mb-1">Мультиканальность</h4>
-                      <p className="text-muted-foreground">Один инфоповод → Telegram, ВК, СМИ, сайт</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-3 items-start">
-                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0"></div>
-                    <div>
-                      <h4 className="font-bold mb-1">Контент-планирование</h4>
-                      <p className="text-muted-foreground">Работа «впрок» с ИИ-ассистентами</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="day2" className="bg-white rounded-xl border border-border overflow-hidden">
-              <AccordionTrigger className="px-8 py-6 text-left hover:no-underline">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center shrink-0">
-                    <span className="font-black text-lg text-white">2</span>
+            <AccordionItem value="day2" className="bg-white rounded-3xl border-2 border-border overflow-hidden">
+              <AccordionTrigger className="px-10 py-8 text-left hover:no-underline">
+                <div className="flex items-start gap-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg">
+                    <span className="font-black text-2xl text-white">2</span>
                   </div>
                   <div>
-                    <div className="text-2xl font-black mb-1">День 2</div>
-                    <div className="text-base font-normal text-muted-foreground">Визуал, аналитика и автоматизация</div>
+                    <div className="text-3xl font-black mb-2">День 2</div>
+                    <div className="text-lg font-medium text-foreground/60">Визуал, аналитика и автоматизация</div>
                   </div>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="px-8 pb-8 pt-0">
-                <div className="space-y-4 pl-16">
-                  <div className="flex gap-3 items-start">
-                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0"></div>
-                    <div>
-                      <h4 className="font-bold mb-1">Визуальный контент</h4>
-                      <p className="text-muted-foreground">Создание изображений и презентаций с ИИ</p>
+              <AccordionContent className="px-10 pb-10 pt-0">
+                <div className="space-y-5 pl-20">
+                  {[
+                    { title: "Визуальный контент", desc: "Создание изображений и презентаций с ИИ" },
+                    { title: "Мониторинг медиа", desc: "Отслеживание СМИ и соцсетей, поиск трендов" },
+                    { title: "Аналитические справки", desc: "Репутационные риски и автоматический анализ" },
+                    { title: "ИИ-ассистенты и боты", desc: "Telegram-боты для автоматизации рутины" },
+                    { title: "План внедрения", desc: "Пошаговая стратегия внедрения ИИ за 30 дней" }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex gap-4 items-start">
+                      <div className="w-6 h-6 rounded-full bg-purple-600/20 flex items-center justify-center shrink-0 mt-1">
+                        <Icon name="Check" size={14} className="text-purple-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-1">{item.title}</h4>
+                        <p className="text-foreground/60">{item.desc}</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex gap-3 items-start">
-                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0"></div>
-                    <div>
-                      <h4 className="font-bold mb-1">Мониторинг медиа</h4>
-                      <p className="text-muted-foreground">Отслеживание СМИ и соцсетей, поиск трендов</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-3 items-start">
-                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0"></div>
-                    <div>
-                      <h4 className="font-bold mb-1">Аналитические справки</h4>
-                      <p className="text-muted-foreground">Репутационные риски и автоматический анализ</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-3 items-start">
-                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0"></div>
-                    <div>
-                      <h4 className="font-bold mb-1">ИИ-ассистенты и боты</h4>
-                      <p className="text-muted-foreground">Telegram-боты для автоматизации рутины</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-3 items-start">
-                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0"></div>
-                    <div>
-                      <h4 className="font-bold mb-1">План внедрения</h4>
-                      <p className="text-muted-foreground">Пошаговая стратегия внедрения ИИ за 30 дней</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -282,131 +291,125 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="results" className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Что унесут участники
-          </h2>
-          <p className="text-lg text-muted-foreground mb-12 max-w-2xl">
-            Практические инструменты для немедленного применения в работе
-          </p>
-          <div className="grid md:grid-cols-2 gap-8">
+      <section id="results" className="py-24 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-black mb-6">
+              Что унесут <span className="gradient-text">участники</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Практические инструменты для немедленного применения в работе
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {[
-              { icon: "BookOpen", title: "Библиотека промптов", desc: "Готовые шаблоны под вашу деятельность — от пресс-релизов до постов в соцсети" },
-              { icon: "FileText", title: "Набор готовых материалов", desc: "Примеры текстов и визуалов, созданных на обучении с применением ИИ" },
-              { icon: "CalendarDays", title: "Контент-план", desc: "Готовый план публикаций на 2-4 недели для всех каналов коммуникации" },
-              { icon: "BarChart3", title: "Инструменты аналитики", desc: "Шаблоны для мониторинга медиа и автоматизации рутинных процессов" },
-              { icon: "Lightbulb", title: "Практические навыки", desc: "Понимание, как использовать ИИ ежедневно для решения рабочих задач" },
-              { icon: "Rocket", title: "Конкурентное преимущество", desc: "ИИ — новый стандарт работы для современных коммуникаций" }
+              { icon: "BookOpen", title: "Библиотека промптов", desc: "Готовые шаблоны под вашу деятельность — от пресс-релизов до постов", gradient: "from-primary/20 to-purple-500/20" },
+              { icon: "FileText", title: "Готовые материалы", desc: "Примеры текстов и визуалов, созданных на обучении", gradient: "from-purple-500/20 to-pink-500/20" },
+              { icon: "CalendarDays", title: "Контент-план", desc: "Готовый план публикаций на 2-4 недели для всех каналов", gradient: "from-pink-500/20 to-primary/20" },
+              { icon: "BarChart3", title: "Инструменты аналитики", desc: "Шаблоны для мониторинга медиа и автоматизации", gradient: "from-primary/20 to-purple-500/20" },
+              { icon: "Lightbulb", title: "Практические навыки", desc: "Понимание, как использовать ИИ ежедневно", gradient: "from-purple-500/20 to-pink-500/20" },
+              { icon: "Rocket", title: "Конкурентное преимущество", desc: "ИИ — новый стандарт работы для коммуникаций", gradient: "from-pink-500/20 to-primary/20" }
             ].map((item, idx) => (
-              <div key={idx} className="flex gap-5 items-start p-6 rounded-xl border border-border hover:shadow-lg transition-all bg-muted/30">
-                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                  <Icon name={item.icon} size={28} />
+              <Card key={idx} className={`p-8 bg-gradient-to-br ${item.gradient} border-0 hover:scale-105 transition-all`}>
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                  <Icon name={item.icon} size={28} className="text-primary" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
+                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                <p className="text-foreground/60 leading-relaxed">{item.desc}</p>
+              </Card>
             ))}
           </div>
-          <div className="mt-12 p-10 border-2 border-primary rounded-2xl bg-primary/5">
-            <div className="max-w-3xl">
-              <h3 className="text-3xl font-black mb-4">Ключевая идея программы</h3>
-              <p className="text-lg leading-relaxed">
+          
+          <Card className="p-12 gradient-primary text-white rounded-3xl shadow-2xl glow-effect">
+            <div className="max-w-3xl mx-auto text-center">
+              <Icon name="Sparkles" size={48} className="mx-auto mb-6 opacity-90" />
+              <h3 className="text-4xl font-black mb-6">Ключевая идея программы</h3>
+              <p className="text-xl leading-relaxed opacity-95">
                 ИИ — это новый стандарт работы для коммуникаций. 
                 Не теория. Не хайп. А практический инструмент для результата.
               </p>
             </div>
-          </div>
+          </Card>
         </div>
       </section>
 
-      <section id="register" className="py-20 px-4 bg-muted/30">
+      <section id="register" className="py-24 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-5 gap-12">
-            <div className="md:col-span-3">
-              <h2 className="text-4xl md:text-5xl font-black mb-6">
-                Регистрация на обучение
+          <div className="grid lg:grid-cols-5 gap-12 items-start">
+            <div className="lg:col-span-3">
+              <h2 className="text-5xl md:text-6xl font-black mb-6">
+                Регистрация на <span className="gradient-text">обучение</span>
               </h2>
-              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+              <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
                 Заполните форму, и мы свяжемся с вами для уточнения деталей и подтверждения участия.
               </p>
               <div className="space-y-6">
-                <div className="flex gap-4 items-start p-5 rounded-xl bg-white border border-border">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                    <Icon name="MapPin" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold mb-1">Адрес проведения</h4>
-                    <p className="text-muted-foreground">Будет объявлен после регистрации</p>
-                  </div>
-                </div>
-                <div className="flex gap-4 items-start p-5 rounded-xl bg-white border border-border">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                    <Icon name="Calendar" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold mb-1">Даты проведения</h4>
-                    <p className="text-muted-foreground">Уточняются индивидуально</p>
-                  </div>
-                </div>
-                <div className="flex gap-4 items-start p-5 rounded-xl bg-white border border-border">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                    <Icon name="Clock" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold mb-1">Время занятий</h4>
-                    <p className="text-muted-foreground">8-9 часов каждый день (с перерывами)</p>
-                  </div>
-                </div>
+                {[
+                  { icon: "MapPin", title: "Адрес проведения", desc: "Будет объявлен после регистрации" },
+                  { icon: "Calendar", title: "Даты проведения", desc: "Уточняются индивидуально" },
+                  { icon: "Clock", title: "Время занятий", desc: "8-9 часов каждый день (с перерывами)" }
+                ].map((item, idx) => (
+                  <Card key={idx} className="p-6 flex gap-5 items-start border-2 border-border hover:border-primary/50 transition-all">
+                    <div className="w-14 h-14 gradient-primary rounded-2xl flex items-center justify-center shrink-0 shadow-lg">
+                      <Icon name={item.icon} size={24} className="text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">{item.title}</h4>
+                      <p className="text-foreground/60">{item.desc}</p>
+                    </div>
+                  </Card>
+                ))}
               </div>
             </div>
-            <Card className="md:col-span-2 p-8 bg-white">
-              <form onSubmit={handleSubmit} className="space-y-5">
+            
+            <Card className="lg:col-span-2 p-8 border-2 border-border">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-bold mb-2">Ваше имя *</label>
+                  <label className="block text-sm font-bold mb-3">Ваше имя *</label>
                   <Input 
                     placeholder="Иван Иванов"
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                     required
-                    className="h-12"
+                    className="h-12 rounded-xl border-2"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold mb-2">Email *</label>
+                  <label className="block text-sm font-bold mb-3">Email *</label>
                   <Input 
                     type="email"
                     placeholder="ivan@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                     required
-                    className="h-12"
+                    className="h-12 rounded-xl border-2"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold mb-2">Телефон *</label>
+                  <label className="block text-sm font-bold mb-3">Телефон *</label>
                   <Input 
                     type="tel"
                     placeholder="+7 (999) 123-45-67"
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     required
-                    className="h-12"
+                    className="h-12 rounded-xl border-2"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold mb-2">Комментарий</label>
+                  <label className="block text-sm font-bold mb-3">Комментарий</label>
                   <Textarea 
                     placeholder="Расскажите о своей сфере деятельности..."
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     rows={4}
+                    className="rounded-xl border-2"
                   />
                 </div>
-                <Button type="submit" className="w-full h-12 text-base font-bold bg-secondary hover:bg-secondary/90 text-white">
+                <Button type="submit" className="w-full h-14 text-base font-bold gradient-primary hover:opacity-90 text-white rounded-full glow-effect">
                   Отправить заявку
+                  <Icon name="ArrowRight" size={20} className="ml-2" />
                 </Button>
               </form>
             </Card>
@@ -414,83 +417,28 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Частые вопросы
-          </h2>
-          <p className="text-lg text-muted-foreground mb-12">
-            Ответы на популярные вопросы об обучении
-          </p>
-          <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="q1" className="bg-muted/30 rounded-xl border border-border px-6">
-              <AccordionTrigger className="text-lg font-bold hover:no-underline py-5">
-                Нужны ли специальные знания для участия?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
-                Нет, специальных технических знаний не требуется. Программа разработана для специалистов в коммуникациях, 
-                которые хотят освоить практическое применение ИИ в своей работе. Весь материал подаётся доступным языком.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="q2" className="bg-muted/30 rounded-xl border border-border px-6">
-              <AccordionTrigger className="text-lg font-bold hover:no-underline py-5">
-                Что нужно взять с собой?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
-                Потребуется ноутбук для практических заданий. Все необходимые инструменты и доступы будут предоставлены 
-                на обучении. Также рекомендуем взять блокнот для заметок.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="q3" className="bg-muted/30 rounded-xl border border-border px-6">
-              <AccordionTrigger className="text-lg font-bold hover:no-underline py-5">
-                Выдаётся ли сертификат?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
-                Да, по окончании обучения все участники получают сертификат о прохождении программы. 
-                Также вы унесёте с собой все практические материалы и инструменты.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="q4" className="bg-muted/30 rounded-xl border border-border px-6">
-              <AccordionTrigger className="text-lg font-bold hover:no-underline py-5">
-                Есть ли возможность дистанционного участия?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
-                Данная программа проводится только в очном формате для максимальной эффективности практических занятий 
-                и живого взаимодействия. Онлайн-формат может быть рассмотрен в будущем.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="q5" className="bg-muted/30 rounded-xl border border-border px-6">
-              <AccordionTrigger className="text-lg font-bold hover:no-underline py-5">
-                Какие ИИ-инструменты будут использоваться?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
-                Мы работаем с актуальными ИИ-платформами для генерации текста, изображений и аналитики. 
-                Конкретный список инструментов предоставляется участникам перед началом обучения.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-      </section>
-
-      <footer className="py-16 px-4 bg-muted/30 border-t border-border">
-        <div className="container mx-auto text-center">
-          <div className="text-xl font-black mb-4">ИИ для коммуникаций</div>
-          <p className="text-muted-foreground mb-8">
-            Практический инструмент для результата
-          </p>
-          <div className="flex justify-center gap-8 mb-8 text-sm font-medium">
-            <a href="#audience" className="hover:text-primary transition-colors">Для кого</a>
-            <a href="#program" className="hover:text-primary transition-colors">Программа</a>
-            <a href="#results" className="hover:text-primary transition-colors">Результаты</a>
-            <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
+      <footer className="py-16 px-4 bg-foreground text-background">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
+                <Icon name="Sparkles" size={20} className="text-white" />
+              </div>
+              <div>
+                <div className="font-bold text-lg">ИИ для коммуникаций</div>
+                <div className="text-sm text-background/60">Практический инструмент для результата</div>
+              </div>
+            </div>
+            <div className="flex gap-8 text-sm font-medium">
+              <a href="#audience" className="hover:text-primary transition-colors">Для кого</a>
+              <a href="#program" className="hover:text-primary transition-colors">Программа</a>
+              <a href="#examples" className="hover:text-primary transition-colors">Примеры</a>
+              <a href="#results" className="hover:text-primary transition-colors">Результаты</a>
+            </div>
           </div>
-          <p className="text-sm text-muted-foreground">
+          <div className="mt-8 pt-8 border-t border-background/10 text-center text-sm text-background/40">
             © 2026 Образовательная программа по ИИ
-          </p>
+          </div>
         </div>
       </footer>
     </div>

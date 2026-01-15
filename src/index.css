@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,35 +15,35 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 46 98% 65%;
-    --primary-foreground: 0 0% 10%;
+    --primary: 258 82% 63%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 20%;
+    --secondary: 270 60% 50%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 46 98% 65%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 258 82% 63%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 46 98% 65%;
+    --ring: 258 82% 63%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 0 0% 10%;
-    --sidebar-primary: 46 98% 65%;
-    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-primary: 258 82% 63%;
+    --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 0 0% 96%;
     --sidebar-accent-foreground: 0 0% 10%;
     --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 46 98% 65%;
+    --sidebar-ring: 258 82% 63%;
   }
 }
 
@@ -65,7 +65,7 @@
   h4,
   h5,
   h6 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     font-weight: 700;
   }
 }
@@ -73,5 +73,20 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, #7855ed 0%, #a78bfa 100%);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #7855ed 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 40px rgba(120, 85, 237, 0.3);
   }
 }
